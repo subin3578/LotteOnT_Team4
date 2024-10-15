@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/my")
 @Controller
 public class MyController {
+
     @GetMapping("/home")
     public String home() {
         return "/my/home";

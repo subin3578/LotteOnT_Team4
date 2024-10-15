@@ -7,30 +7,23 @@
 <head>
   <meta charset="UTF-8" />
   <title>롯데ON::롯데 온라인 쇼핑몰</title>
-  <link rel="shortcut icon" type="image/x-icon" href="../images/main/favicon.ico" />
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
   <link rel="stylesheet" href="../css/my/myInfo.css" />
-  <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 </head>
 
 <body>
   <div id="wrapper">
 
     <main>
-
+      <!--어사이드-->
+      <div th:replace="~{my/my_aside.html}"></div>
 
       <section class="myInfo_sec">
 
         <div class="myInfo_banner">
-          <a href="#"><img src="../images/company/bg_company_promote.jpg" alt=""></a>
+          <a href="#"><img th:src="@{../images/company/bg_company_promote.jpg}" alt=""></a>
         </div>
 
-        
+
         <!-- 나의리뷰 -->
         <article class="myInfo_Review myInfo_Article">
           <div class="myInfo_ArticleTitle"><span>나의리뷰</span></div>
@@ -57,7 +50,7 @@
                   배송이 빠릅니다. 잘 사용하겠습니다.
                 </td>
                 <td>
-                  <img src="../images/my/임시 별점.png" alt="">
+                  <img th:src="@{../images/my/임시 별점.png}" alt="">
                 </td>
                 <td>
                   2022-12-10
@@ -77,7 +70,7 @@
                   배송이 빠릅니다. 잘 사용하겠습니다.
                 </td>
                 <td>
-                  <img src="../images/my/임시 별점.png" alt="">
+                  <img th:src="@{../images/my/임시 별점.png}" alt="">
                 </td>
                 <td>
                   2022-12-6
@@ -97,7 +90,7 @@
                   배송이 빠릅니다. 잘 사용하겠습니다.
                 </td>
                 <td>
-                  <img src="../images/my/임시 별점.png" alt="">
+                  <img th:src="@{../images/my/임시 별점.png}" alt="">
                 </td>
                 <td>
                   2022-12-6

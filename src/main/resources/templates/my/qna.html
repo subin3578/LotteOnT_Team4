@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<!-- xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.thymeleaf.org/"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>롯데ON::롯데 온라인 쇼핑몰</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/main/favicon.ico" />
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+  <link rel="stylesheet" href="../css/my/myInfo.css" />
+  <link rel="stylesheet" href="../css/my/myInfo_qna.css" />
+  <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <main>
+
+      <section class="myInfo_sec">
+
+        <div class="myInfo_banner">
+          <a href="#"><img src="../images/company/bg_company_promote.jpg" alt=""></a>
+        </div>
+
+        
+        <!-- 나의 문의 -->
+        <article class="myInfo_Qna myInfo_Article">
+          <div class="myInfo_ArticleTitle"><span>나의문의</span></div>
+          <table class="myInfo_QnaTable myInfo_Table">
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>문의채널</th>
+                <th>문의유형</th>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>상태</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 반복 block -->
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  고객센터
+                </td>
+                <td>
+                  주문 / 결제
+                </td>
+                <td>
+                  신용카드 결제 중 오류가 난 경우 어떻게 하나요?
+                </td>
+                <td>
+                  2022-12-12
+                </td>
+                <td class="qna_answer">
+                  검토 중
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>
+                  2
+                </td>
+                <td>
+                  고객센터
+                </td>
+                <td>
+                  주문 / 결제
+                </td>
+                <td>
+                  신용카드 결제 중 오류가 난 경우 어떻게 하나요?
+                </td>
+                <td>
+                  2022-12-12
+                </td>
+                <td class="qna_answer answerd">
+                  답변완료
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>
+                  3
+                </td>
+                <td>
+                  판매자 게시판
+                </td>
+                <td>
+                  배송
+                </td>
+                <td>
+                  배송기간이 보통 얼마나 걸리나요?
+                </td>
+                <td>
+                  2022-12-12
+                </td>
+                <td class="qna_answer answerd">
+                  답변완료
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+            </tbody>
+          </table>
+        </article>
+        <div class="page">
+          <a href="#">이전</a>
+          <a href="#" class="page_current">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">다음</a>
+        </div>
+
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="/company/index">회사소개</a></li>
+        <li><a href="#">서비스이용약관</a></li>
+        <li><a href="#">개인정보처리방침</a></li>
+        <li><a href="#">전자금융거래약관</a></li>
+      </ul>
+      <div>
+        <p><img src="../images/main/footer_logo.png" alt="로고" /></p>
+        <p>
+          <strong>(주)롯데ON</strong><br />- bxSlider
+          대표이사 : 김사무엘상현, 정준호, 강성현<br />
+          사업자등록번호 : 529-85-00774(롯데쇼핑(주) e커머스사업부)<br />
+          통신판매업 신고 : 서울송파 제0158호<br>
+          호스팅 서비스사업자 : 롯데쇼핑(주) e커머스사업부
+        </p>
+        <p>
+          <strong>고객센터</strong><br />
+          Tel : 1899-7000(유료) (평일 09:00~18:00)<br />
+          Fax : 051-123-4567 | E-mail : lotteon@lotte.net<br />
+          App Version:[[${appInfo}]]
+        </p>
+      </div>
+    </footer>
+    <button type="button" id="top">상단이동</button>
+  </div>
+</body>
+
+</html>

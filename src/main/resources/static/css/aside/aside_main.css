@@ -1,0 +1,271 @@
+
+/* aside 개별 초기화 */
+.aside * {
+  margin: 0;
+  padding: 0;
+  font: normal 12px "Noto Sans CJK KR";
+}
+
+.aside ul, ol {
+  list-style: none;
+}
+.aside a {
+  text-decoration: none;
+  color: #111;
+}
+.aside input, textarea {
+  outline: none;
+}
+
+
+
+/* 왼쪽 카테고리 메뉴 */
+.aside {
+  float: left;
+  width: 215px;
+  height: 100%;
+}
+
+/* 카테고리 */
+.aside > .category {
+  position: relative;
+  width: 100%;
+  height: 425px;
+  background: #fff;
+  border: 1px solid #ef2a23;;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+/* 카테고리 목록 */
+.aside > .category > li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  color: #111;
+  font-size: 13px;    
+  box-sizing: border-box;
+}
+
+/* 카테고리 */
+.aside > .category > li:first-child {
+  padding: 0 20px;
+  color: #111;
+  line-height: 40px;
+}
+
+/*  */
+.aside > .category > li > a {
+  display: block;
+  padding: 0 20px;
+  line-height: 40px;
+  color: #111;  
+  text-decoration: none;
+  font-size: 1em;
+}
+
+/* 마우스 올리면 붉은색 */
+.aside > .category > li > a:hover {  
+  color: #ef2a23;
+}
+
+/* 마우스를 올리는 카테고리 메뉴의 서브메뉴 출현 */
+.aside > .category > li > a:hover + ol {
+  display: block;
+}
+/* 서브메뉴에 마우스가 올라가면 계속 노출 */
+.aside > .category ol:hover {
+  display: block;
+}
+
+/*  */
+.aside > .category i {
+  width: 22px;
+  font-size: 16px;
+  margin-right: 12px;
+}
+
+.aside > .category > li i.fa-angle-right {
+  float: right;
+  width: auto;
+  margin-top: 10px;
+  margin-right: 0;
+}
+
+.aside > .category ol {
+  position: absolute;
+  left: 213px;
+  top: 0px;
+  display: none;
+  width: 215px;
+  height: 425px;
+  border: 1px solid #ef2a23;
+  border-top: none;
+  background: #fff;
+  box-sizing: border-box;
+  z-index: 10000;
+}
+
+.aside > .category ol > li {
+  width: 100%;
+  height: 24px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.aside > .category ol > li > a:hover {
+  color: #ef2a23;
+  text-decoration: underline;
+}
+
+/* 베스트 배너 */
+.aside > .best {
+  width: 215px;
+  height: auto;
+  margin-top: 6px;
+  border: 1px solid #dbdbdb;  
+  box-sizing: border-box;
+  box-shadow: 0 0 5px rgba(55, 55, 5, 0.2);
+}
+
+.aside > .best > h1 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #111;
+  margin: 6px;
+}
+
+.aside > .best > h1 > i {
+  margin-right: 6px;
+  font-size: 18px;
+}
+
+.aside > .best > ol {
+  width: 100%;
+}
+.aside > .best > ol > li {
+  width: 100%;
+  height: 100%;
+  padding: 0 6px;
+  box-sizing: border-box;
+  margin-bottom: 16px;
+}
+
+
+.aside > .best > ol > li > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* 마우스 호버시 밑줄 */
+.aside > .best > ol > li > a:hover h2 {
+  text-decoration: underline;
+}
+
+/* 베스트 상품 이미지 */
+.aside > .best > ol > li > a > .thumb {
+  float: left;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* 첫번째 베스트 상품 */
+.aside > .best > ol > li:first-child > a > .thumb {
+  position: relative;
+  float: none;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+/* 첫번째 상품 이미지 */
+.aside > .best > ol > li:first-child > a > .thumb  > img{
+  width: 100%;
+  height: 135px;
+}
+/* 상품 순위(번호) */
+.aside > .best > ol > li > a > .thumb > i {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+  font-size: 14px;
+  padding: 0;
+  color: #ef3e42;
+  border-bottom: 1px solid #ef3e42;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  line-height: 18px;
+}
+/* 첫번째 상품 순위(번호) */
+.aside > .best > ol > li:first-child > a > .thumb > i {
+  width: 35px;
+  height: 26px;
+  font-size: 25px;
+  top: 5px;
+}
+
+.thumb > img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 베스트 상품 정보 */
+.aside > .best > ol > li > a > article {
+  float: left;
+  width: 148px;
+  padding-left: 6px;
+  box-sizing: border-box;
+}
+
+
+/* 상품 이름 */
+.aside > .best > ol > li > a h2 {
+  margin-top: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.aside > .best > ol > li > a .aside_desc {
+  float: left;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 50%;
+  height: auto;
+}
+
+.aside > .best > ol > li > a .org_price > del::after {
+  content: "원";
+}
+.aside > .best > ol > li > a .org_price > ins::after {
+  content: "원";
+}
+.aside > .best > ol > li > a .org_price > del {
+  font-size: 10px;
+  color: #aaa;
+}
+.aside > .best > ol > li > a .org_price > span {
+  color: #eb000a;
+  font-size: 10px;
+}
+.aside > .best > ol > li > a .org_price > span::after {
+  content: "%↓";
+}
+
+.aside > .best > ol > li > a .dis_price > ins {
+  font-size: 14px;
+  text-decoration: none;
+}
+.aside > .best > ol > li > a .dis_price > ins::after {
+  content: "원";
+}

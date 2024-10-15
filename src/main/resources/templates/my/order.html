@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<!-- xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.thymeleaf.org/"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>롯데ON::롯데 온라인 쇼핑몰</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/main/favicon.ico" />
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+  <link rel="stylesheet" href="../css/my/myInfo.css" />
+  <link rel="stylesheet" href="../css/my/myInfo_search.css" />
+  <link rel="stylesheet" href="../css/my/myInfo_order.css" />
+  <link rel="stylesheet" href="../css/my/myInfo_qna.css" />
+  <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <main>
+
+      <section class="myInfo_sec">
+
+        <div class="myInfo_banner">
+          <a href="#"><img src="../images/company/bg_company_promote.jpg" alt=""></a>
+        </div>
+
+        <!-- 최근 주문내역 -->
+        <article class="myInfo_recentOrder myInfo_Article">
+          <div class="myInfo_ArticleTitle"><span>전체주문내역</span></div>
+          <div class="myInfo_Search">
+            <p>기간별조회</p>
+            <ol class="myInfo_Search_Time">
+              <li><a href="">1 주일</a></li>
+              <li><a href="">15 일</a></li>
+              <li><a href="" class="Time_current">1 개월</a></li>
+            </ol>
+            <ol class="myInfo_Search_Time">
+              <li><a href="">8 월</a></li>
+              <li><a href="">9 월</a></li>
+              <li><a href="">10 월</a></li>
+              <li><a href="">11 월</a></li>
+              <li><a href="" class="Time_current">12월</a></li>
+            </ol>
+            <ol class="myInfo_Search_Time">
+              <li><input type="date"><span>~</span><input type="date"></li>
+            </ol>
+            <button>조회</button>
+          </div>
+          <table class="myInfo_recentTable myInfo_Table">
+            <thead>
+              <tr>
+                <th>날짜</th>
+                <th>상품정보</th>
+                <th>상태</th>
+                <th>확인/신청</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 반복 block -->
+              <tr>
+                <td>2022-12-13</td>
+                <td>
+                  <div class="myInfo_productInfo">
+                    <img src="../images/my/임시 이미지.png" alt="">
+                    <div>
+                      <p>주문번호: 1012211341</p>
+                      <p>{주}상호명</p>
+                      <p>상품명</p>
+                      <p>수량: 1개</p>
+                      <p><strong>34,000원</strong></p>
+                    </div>
+                  </div>
+                </td>
+                <td>배송완료</td>
+                <td class="myInfo_product_buttons">
+                  <button>수취확인</button>
+                  <button>상품평쓰기</button>
+                  <button>반품신청</button>
+                  <button>교환신청</button>
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>2022-12-13</td>
+                <td>
+                  <div class="myInfo_productInfo">
+                    <img src="../images/my/임시 이미지.png" alt="">
+                    <div>
+                      <p>주문번호: 1012211341</p>
+                      <p>{주}상호명</p>
+                      <p>상품명</p>
+                      <p>수량: 1개</p>
+                      <p><strong>34,000원</strong></p>
+                    </div>
+                  </div>
+                </td>
+                <td>배송완료</td>
+                <td class="myInfo_product_buttons">
+                  <button>수취확인</button>
+                  <button>상품평쓰기</button>
+                  <button>반품신청</button>
+                  <button>교환신청</button>
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>2022-12-13</td>
+                <td>
+                  <div class="myInfo_productInfo">
+                    <img src="../images/my/임시 이미지.png" alt="">
+                    <div>
+                      <p>주문번호: 1012211341</p>
+                      <p>{주}상호명</p>
+                      <p>상품명</p>
+                      <p>수량: 1개</p>
+                      <p><strong>34,000원</strong></p>
+                    </div>
+                  </div>
+                </td>
+                <td>배송완료</td>
+                <td class="myInfo_product_buttons">
+                  <button>수취확인</button>
+                  <button>상품평쓰기</button>
+                  <button>반품신청</button>
+                  <button>교환신청</button>
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>2022-12-13</td>
+                <td>
+                  <div class="myInfo_productInfo">
+                    <img src="../images/my/임시 이미지.png" alt="">
+                    <div>
+                      <p>주문번호: 1012211341</p>
+                      <p>{주}상호명</p>
+                      <p>상품명</p>
+                      <p>수량: 1개</p>
+                      <p><strong>34,000원</strong></p>
+                    </div>
+                  </div>
+                </td>
+                <td>배송완료</td>
+                <td class="myInfo_product_buttons">
+                  <button>수취확인</button>
+                  <button>상품평쓰기</button>
+                  <button>반품신청</button>
+                  <button>교환신청</button>
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>2022-12-13</td>
+                <td>
+                  <div class="myInfo_productInfo">
+                    <img src="../images/my/임시 이미지.png" alt="">
+                    <div>
+                      <p>주문번호: 1012211341</p>
+                      <p>{주}상호명</p>
+                      <p>상품명</p>
+                      <p>수량: 1개</p>
+                      <p><strong>34,000원</strong></p>
+                    </div>
+                  </div>
+                </td>
+                <td>배송완료</td>
+                <td class="myInfo_product_buttons">
+                  <button>수취확인</button>
+                  <button>상품평쓰기</button>
+                  <button>반품신청</button>
+                  <button>교환신청</button>
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+            </tbody>
+          </table>
+        </article>
+        <div class="page">
+          <a href="#">이전</a>
+          <a href="#" class="page_current">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">다음</a>
+        </div>
+        <!-- 최근 주문내역 끝 -->
+
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

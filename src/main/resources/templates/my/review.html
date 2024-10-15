@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.thymeleaf.org/"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" -->
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>롯데ON::롯데 온라인 쇼핑몰</title>
+  <link rel="shortcut icon" type="image/x-icon" href="../images/main/favicon.ico" />
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+  <link rel="stylesheet" href="../css/my/myInfo.css" />
+  <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <main>
+
+
+      <section class="myInfo_sec">
+
+        <div class="myInfo_banner">
+          <a href="#"><img src="../images/company/bg_company_promote.jpg" alt=""></a>
+        </div>
+
+        
+        <!-- 나의리뷰 -->
+        <article class="myInfo_Review myInfo_Article">
+          <div class="myInfo_ArticleTitle"><span>나의리뷰</span></div>
+          <table class="myInfo_ReviewTable myInfo_Table">
+            <thead>
+              <tr>
+                <th>번호</th>
+                <th>상품평</th>
+                <th>내용</th>
+                <th>평점</th>
+                <th>작성일</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 반복 block -->
+              <tr>
+                <td>
+                  1
+                </td>
+                <td>
+                  상품번호 / 상품명
+                </td>
+                <td>
+                  배송이 빠릅니다. 잘 사용하겠습니다.
+                </td>
+                <td>
+                  <img src="../images/my/임시 별점.png" alt="">
+                </td>
+                <td>
+                  2022-12-10
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>
+                  2
+                </td>
+                <td>
+                  상품번호 / 상품명
+                </td>
+                <td>
+                  배송이 빠릅니다. 잘 사용하겠습니다.
+                </td>
+                <td>
+                  <img src="../images/my/임시 별점.png" alt="">
+                </td>
+                <td>
+                  2022-12-6
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+
+              <!-- 반복 block -->
+              <tr>
+                <td>
+                  3
+                </td>
+                <td>
+                  상품번호 / 상품명
+                </td>
+                <td>
+                  배송이 빠릅니다. 잘 사용하겠습니다.
+                </td>
+                <td>
+                  <img src="../images/my/임시 별점.png" alt="">
+                </td>
+                <td>
+                  2022-12-6
+                </td>
+              </tr>
+              <!-- 반복 블럭 끝 -->
+            </tbody>
+          </table>
+        </article>
+        <div class="page">
+          <a href="#">이전</a>
+          <a href="#" class="page_current">1</a>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">다음</a>
+        </div>
+
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

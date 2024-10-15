@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.thymeleaf.org/"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>join</title>
+    <link rel="stylesheet" href="css/main/common.css" />
+    <link rel="stylesheet" href="../css/member/join.css" />
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <div>
+                <block sec:authorize="isAnonymous()">
+                    <a href="/member/login">로그인</a>
+                    <a href="/member/join">회원가입</a>
+                </block>
+                <block sec:authorize="isAuthenticated()">
+                    <!-- <a href="#" >[[${#authentication.principal.member.name}]]</a> 이름 -->
+                    <block sec:authorize="hasRole('1')">
+                        <!-- <a href="/my/home(uid=${#authentication.principal.member.uid})">마이페이지</a> -->
+                        <a href="#">마이페이지</a>
+                    </block>
+                    <block sec:authorize="hasAnyRole('2','3')">
+                        <a href="/admin/index">관리자</a>
+                    </block>
+                    <a href="/member/logout">로그아웃</a>
+                    <a href="/member/cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
+                        장바구니
+                    </a>
+                </block>
+            </div>
+        </div>
+        <div class="logo">
+            <div>
+                <a href="#"><img src="images/main/header_logo.png" alt="로고" /></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="join_container">
+            <div class="lotteinfo">
+                <span class="info1">대한민국 1등 온라인 인터넷 쇼핑</span>
+                <span class="info2">롯데 ON에 오신 것을 환영합니다.</span>
+            </div>
+            <div class="join_section">
+                <div class="custjoin">
+                    <div class="customer_join">일반회원가입</div>
+                    <div class="joininfo">
+                        <span class="join1">개인구매회원 (외국인포함)</span>
+                        <span class="join2">만 14세 이상 가능</span>
+                    </div>
+                    <button class="customer">회원가입</button>
+                </div>
+                <div class="selljoin">
+                    <div class="seller_join">판매회원가입</div>
+                    <div class="joininfo">
+                        <span class="join3">사업자 판매회원</span>
+                        <span class="join4">사업자등록증을 보유한 회원</span>
+                    </div>
+                    <button class="seller">회원가입</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

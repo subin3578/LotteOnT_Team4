@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- xmlns:th="http://www.thymeleaf.org"
+        xmlns:layout="http://www.thymeleaf.org/"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/user/common.css" />
+    <link rel="stylesheet" href="../css/member/signup.css" />
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <div>
+                <block sec:authorize="isAnonymous()">
+                    <a href="/member/login">로그인</a>
+                    <a href="/member/join">회원가입</a>
+                </block>
+                <block sec:authorize="isAuthenticated()">
+                    <!-- <a href="#" >[[${#authentication.principal.member.name}]]</a> 이름 -->
+                    <block sec:authorize="hasRole('1')">
+                        <!-- <a href="/my/home(uid=${#authentication.principal.member.uid})">마이페이지</a> -->
+                        <a href="#">마이페이지</a>
+                    </block>
+                    <block sec:authorize="hasAnyRole('2','3')">
+                        <a href="/admin/index">관리자</a>
+                    </block>
+                    <a href="/member/logout">로그아웃</a>
+                    <a href="/member/cart">
+                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
+                        장바구니
+                    </a>
+                </block>
+            </div>
+        </div>
+        <div class="logo">
+            <div>
+                <a href="#"><img src="images/main/header_logo.png" alt="로고" /></a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="login-container">
+            <h2 class="titterm">
+                <span class="tit">약관동의</span>
+            </h2>
+            <div class="main-wrapper">
+                <div class="main-box">
+                    <section class="terms">
+                        <table>
+                            <caption>(필수) 이용약관</caption>
+                            <tr>
+                                <td>
+                                    <textarea readonly>사이트 이용약관</textarea>
+                                    <p>
+                                        <label><input type="checkbox" name="chk1" />동의합니다.</label>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <caption>(필수) 전자금융 이용약관</caption>
+                            <tr>
+                                <td>
+                                    <textarea readonly>개인정보 취급방침</textarea>
+                                    <p>
+                                        <label><input type="checkbox" name="chk2" />동의합니다.</label>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <caption>(필수) 개인정보 수집동의</caption>
+                            <tr>
+                                <td>
+                                    <textarea readonly>사이트 이용약관</textarea>
+                                    <p>
+                                        <label><input type="checkbox" name="chk1" />동의합니다.</label>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table>
+                            <caption>(선택) 위치정보 이용약관</caption>
+                            <tr>
+                                <td>
+                                    <textarea readonly>사이트 이용약관</textarea>
+                                    <p>
+                                        <label><input type="checkbox" name="chk1" />동의합니다.</label>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                        <div>
+                            <a href="#" class="btnCancel">취소</a>
+                            <a href="#" class="btnNext">다음</a>
+                        </div>
+                    </section>
+                </div>
+            </div>
+    </main>
+
+</body>
+
+</html>

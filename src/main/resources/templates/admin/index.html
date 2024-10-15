@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 메인</title>
+
+    <!--공통 css 부분-->
+    <link rel="stylesheet" href="/css/admin/style_admin_common.css">
+    <!--각 페이지(section) 개별 css-->
+    <link rel="stylesheet" href="/css/admin/style_admin_main.css">
+
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a href="#" class="logo"><img src="/images/logo.png"></a>
+            <nav>
+                <a href="#">로그아웃</a>
+                <a href="#">고객센터</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div id="wrapper">
+            <aside>
+                <ul class="sidebar-menu">
+                    <li><a href="#">환경설정</a></li>
+                    <li><a href="#">상품관리</a></li>
+                    <li><a href="#">회원관리</a></li>
+                    <li><a href="#">주문관리</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </aside>
+
+            <!--section-->
+            <section>
+                <div class="breadcrumb">
+                    <a href="#">Home</a> > <a href="#" class="location">관리자메인</a>
+                </div>
+                <h3>관리자 메인</h3>
+
+                <div class="dashboard">
+                    <article class="dashboard-item">
+                        <h4>운영현황</h4>
+                        <table>
+                            <tr>
+                                <th>주문건수</th>
+                                <th>주문금액</th>
+                                <th>회원가입</th>
+                                <th>방문자 수</th>
+                                <th>신규 게시물</th>
+                            </tr>
+                            <tr>
+                                <td>131</td>
+                                <td>1,130,000원</td>
+                                <td>1,014명</td>
+                                <td>1,014명</td>
+                                <td>14개</td>
+                            </tr>
+                            <tr>
+                                <td>PC: 60 / Mobile: 71</td>
+                                <td>PC: 12 / Mobile: 13</td>
+                                <td>PC: 13 / Mobile: 13</td>
+                                <td>PC: 12 / Mobile: 13</td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <article class="dashboard-item">
+                        <h4>주문현황</h4>
+                        <table>
+                            <tr>
+                                <th>입금대기</th>
+                                <th>배송준비</th>
+                                <th>취소요청</th>
+                                <th>교환요청</th>
+                                <th>반품요청</th>
+                            </tr>
+                            <tr>
+                                <td>101건</td>
+                                <td>124건</td>
+                                <td>14건</td>
+                                <td>7건</td>
+                                <td>24건</td>
+                            </tr>
+                        </table>
+                    </article>
+
+                    <article class="dashboard-item">
+                        <h4>공지사항</h4>
+                        <ul>
+                            <li><a href="#">[안내] 해외결제사 창 문자주의</a></li>
+                            <li><a href="#">[안내] 롯데ON 배송관련 안내</a></li>
+                            <li><a href="#">[안내] 구매확정 안내</a></li>
+                        </ul>
+                    </article>
+
+                    <article class="dashboard-item">
+                        <h4>고객문의</h4>
+                        <ul>
+                            <li>[가입] 개인정보 문의 - 22.10.31</li>
+                            <li>[배송] 배송 문의 - 22.10.31</li>
+                            <li>[회원정보] 정보 수정 문의 - 22.10.31</li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+            <!--/section-->
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 롯데ON. All rights reserved.</p>
+    </footer>
+</body>
+</html>

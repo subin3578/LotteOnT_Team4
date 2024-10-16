@@ -1,73 +1,12 @@
-/* 상품 목록 섹션 */
-.product-list-section {
-    padding: 20px;
-}
 
-/* 정렬 옵션 */
-.sort-options {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #ddd;
-    padding: 10px 0;
-}
-
-.sort-link {
-    padding: 10px 15px;
-    font-size: 14px;
-    text-decoration: none;
-    color: #333;
-    transition: color 0.2s ease;
-}
-
-.sort-link:hover {
-    color: #ff5656; /* 마우스 오버 시 색 변경 */
-}
-
-/* 왼쪽 정렬 */
-.sort-options .sort-link {
-    margin-right: 20px;
-}
-
-/* 오른쪽 정렬 */
-.sort-options .sort-linkRight {
-    margin-left: 20px;
-    font-size: 16px;
-}
-
-.sort-options .sort-view-options {
-    display: flex;
-    align-items: center;
-}
-
-/* 아이콘과 텍스트 오른쪽 정렬 */
-.sort-options .sort-view-options a {
-    margin-left: 10px;
-    font-size: 14px;
-    text-decoration: none;
-    color: #333;
-}
-
-.sort-options .sort-view-options a:hover {
-    color: #ff5656;
-}
-
-/* VIEW 선택 */
-.view-count {
-    font-weight: bold;
-    margin-left: 10px;
-}
-
-
-/* 상품 리스트 스타일 */
+/* 상품 리스트 스타일 : grid*/
 .product-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 한 줄에 4개의 상품 배치 */
     gap: 15px;
 
 }
-
+/* 각 상품 아이템 스타일 */
 .product-item {
     background-color: white;
     border: 1px solid #ddd;
@@ -166,47 +105,4 @@
     margin-top: 5px;
     font-size: 12px;
     color: darkgray;
-}
-
-/* 페이지네이션 */
-.pagination {
-    margin-top: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-.pagination ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-}
-
-.pagination ul li {
-    display: inline;
-    margin: 0 5px;
-}
-
-.pagination ul li a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-    font-size: 14px;
-}
-
-.pagination ul li a:hover {
-    background-color: #f0f0f0;
-    border-color: #ccc;
-}
-
-/* 푸터 위에 고정된 페이지네이션 */
-.footer {
-    padding: 20px;
-    text-align: center;
-    background-color: #f5f5f5;
-    margin-top: 40px;
 }

@@ -65,11 +65,11 @@
 
 .content {
     height: 187px;
-    vertical-align: top; 
+    vertical-align: top;
 }
 
 .content td {
-    padding: 15px; 
+    padding: 15px;
 }
 
 
@@ -291,7 +291,7 @@
 }
 
 /* 입력 필드 스타일 */
-.modal-table input[type="text"], 
+.modal-table input[type="text"],
 .modal-table textarea {
     width: 100%;
     padding: 8px;

@@ -38,14 +38,14 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 62vh;
   background-color: #f7f7f7;
   margin: 0 auto;
   width: 980px;
 }
 
 .login-container {
-  height: auto;
+  height: 537px;
   background-color: white;
   padding: 20px;
   border-radius: 10px;
@@ -60,7 +60,7 @@ h2 {
 }
 
 .tit {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .login-form, .image-section {
@@ -71,6 +71,7 @@ h2 {
   position:relative;
   padding: 45px;
   box-sizing: border-box;
+  border-bottom: 1px solid;
 }
 
 .login-image-container {
@@ -151,5 +152,16 @@ h2 {
 
 .image-section img {
   max-width: 100%;
+  height: auto;
+}
+
+.certifi_logo {
+  width: 732px;
+  height: 63px;
+  margin: 0 auto;
+}
+
+.certifi_logo img {
+  width: 100%;
   height: auto;
 }

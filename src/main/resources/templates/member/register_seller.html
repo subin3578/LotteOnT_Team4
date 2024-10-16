@@ -15,36 +15,6 @@
 </style>
 
 <body>
-    <header>
-        <div class="top">
-            <div>
-                <block sec:authorize="isAnonymous()">
-                    <a href="/member/login">로그인</a>
-                    <a href="/member/join">회원가입</a>
-                </block>
-                <block sec:authorize="isAuthenticated()">
-                    <!-- <a href="#" >[[${#authentication.principal.member.name}]]</a> 이름 -->
-                    <block sec:authorize="hasRole('1')">
-                        <!-- <a href="/my/home(uid=${#authentication.principal.member.uid})">마이페이지</a> -->
-                        <a href="#">마이페이지</a>
-                    </block>
-                    <block sec:authorize="hasAnyRole('2','3')">
-                        <a href="/admin/index">관리자</a>
-                    </block>
-                    <a href="/member/logout">로그아웃</a>
-                    <a href="/member/cart">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
-                        장바구니
-                    </a>
-                </block>
-            </div>
-        </div>
-        <div class="logo">
-            <div>
-                <a href="#"><img src="images/main/header_logo.png" alt="로고" /></a>
-            </div>
-        </div>
-    </header>
     <main>
         <div class="main-wrapper">
 
@@ -57,7 +27,6 @@
                                 <td>아이디</td>
                                 <td>
                                     <input type="text" name="uid" placeholder="아이디 입력" /> <span> 영문, 숫자 4~12자 설정</span>
-                                    <button type="button" id="btnCheckUid"><img src="#" alt=""></button>
                                     <span class="resultId"></span>
                                 </td>
                             </tr>
@@ -130,10 +99,8 @@
                 </td>
             </tr>
             </table>
-
             <div>
-                <a href="#" class="btnCancel">취소</a>
-                <input type="submit" class="btnSubmit" value="회원가입" />
+                <input type="button" class="sellerbtn"></button>
             </div>
             </form>
             </section>

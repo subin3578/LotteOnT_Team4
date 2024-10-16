@@ -216,3 +216,12 @@ textarea {
   /* 기존 크기를 유지 */
   border-bottom: 2px solid;
 }
+
+input.sellerbtn {
+  border: none;
+  background-image: url('/images/member/member_join_tit_seller.gif');
+  width: 427px;
+  height: 64px;
+  margin-top: 38px;
+  margin-right: 81px;
+}

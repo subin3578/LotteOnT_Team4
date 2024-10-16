@@ -61,4 +61,9 @@ tr > td:first-child {
   align-self: flex-end;
   margin-top: 10px;
   margin-right: 40px;
+  cursor: pointer;
+}
+
+#btnQNA:hover{
+  background-color: #9cbfea;
 }

@@ -5,17 +5,17 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 
 @Controller
-public class shopController {
+public class ShopController {
     
     //상점목록
-    @GetMapping("/admin/shop_list")
+    @GetMapping("/admin/shop/list")
     public String Adminshoplist(){
-        return "/admin/shop_list";
+        return "/admin/shop/list";
     }
 
-    //판매자 정보
-    @GetMapping("/admin/shop_sales")
+    // 매출현황
+    @GetMapping("/admin/shop/sales")
     public String Adminshopsales(){
-        return "/admin/shop_sales";
+        return "/admin/shop/sales";
     }
 }

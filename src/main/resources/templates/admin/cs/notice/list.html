@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>상품현황</title>
+    <title>공지사항 목록</title>
 
     <!--공통 css 부분-->
     <link rel="stylesheet" th:href="@{/css/admin/style_admin_common.css}"/>
     <!--각 페이지(section) 개별 css-->
-    <link rel="stylesheet" th:href="@{/css/admin/style_admin_product_list.css}"/>
-
+    <link rel="stylesheet" th:href="@{/css/admin/style_admin_article_list.css}"/>
 
 </head>
 <body>
@@ -41,62 +40,83 @@
         <!--section-->
         <section>
             <div class="breadcrumb">
-                <a href="#">Home</a> > <a href="#">상품관리</a> > <a href="#" class="location">상품목록</a>
+                <a href="#">Home</a> > <a href="#">고객센터</a> > <a href="#" class="location">공지사항</a>
             </div>
-            <h3>상품현황</h3>
+            <h3>공지사항 목록</h3>
             <div class="form">
-                <div class="search-bar">
-                    <select id="search-category" class="dropdown">
-                        <option>상품명</option>
-                        <option>상품번호</option>
-                        <option>판매자</option>
-                        <option>제조사</option>
+                <div class="table-controls">
+                    <select class="dropdown">
+                        <option>유형선택</option>
+                        <option>고객서비스</option>
+                        <option>이벤트 당첨</option>
                     </select>
-                    <input type="text" placeholder="키워드 입력" class="search-input">
-                    <button class="search-btn">검색</button>
                 </div>
 
                 <table class="inquiry-table">
                     <colgroup>
-                        <col style="width: 1%">
-                        <col style="width: 10%">
                         <col style="width: 2%">
-                        <col style="width: 16%">
-                        <col style="width: 10%">
+                        <col style="width: 6%">
                         <col style="width: 9%">
-                        <col style="width: 9%">
+                        <col style="width: 28%">
                         <col style="width: 7%">
+                        <col style="width: 6%">
                         <col style="width: 13%">
-                        <col style="width: 7%">
-                        <col style="width: 10%">
                     </colgroup>
                     <thead>
                     <tr>
                         <th><input type="checkbox" class="chkbox"></th>
-                        <th>사진</th>
-                        <th>상품코드</th>
-                        <th>상품명</th>
-                        <th>판매가격</th>
-                        <th>할인율</th>
-                        <th>포인트</th>
-                        <th>재고</th>
-                        <th>판매자</th>
+                        <th>번호</th>
+                        <th>유형</th>
+                        <th>제목</th>
                         <th>조회</th>
+                        <th>날짜</th>
                         <th>관리</th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr>
                         <td><input type="checkbox" class="chkbox"></td>
-                        <td><img src="/images/product1.png" alt="상품 사진" class="product-image"></td>
-                        <td>201603292</td>
-                        <td>상품명 #1</td>
-                        <td>32,000</td>
-                        <td>10%</td>
-                        <td>320</td>
-                        <td>1,000</td>
-                        <td>(주)다피라</td>
                         <td>120</td>
+                        <td>고객서비스</td>
+                        <td class="title">[안내] 해외결제 사칭 문자 주의</td>
+                        <td>120</td>
+                        <td>00.00.00</td>
+                        <td>
+                            <a href="#" class="edit-btn">수정</a>
+                            <button class="deletebtn">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="chkbox"></td>
+                        <td>120</td>
+                        <td>고객서비스</td>
+                        <td class="title">[안내] 해외결제 사칭 문자 주의</td>
+                        <td>120</td>
+                        <td>00.00.00</td>
+                        <td>
+                            <a href="#" class="edit-btn">수정</a>
+                            <button class="deletebtn">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="chkbox"></td>
+                        <td>120</td>
+                        <td>고객서비스</td>
+                        <td class="title">[안내] 해외결제 사칭 문자 주의</td>
+                        <td>120</td>
+                        <td>00.00.00</td>
+                        <td>
+                            <a href="#" class="edit-btn">수정</a>
+                            <button class="deletebtn">삭제</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" class="chkbox"></td>
+                        <td>120</td>
+                        <td>고객서비스</td>
+                        <td class="title">[안내] 해외결제 사칭 문자 주의</td>
+                        <td>120</td>
+                        <td>00.00.00</td>
                         <td>
                             <a href="#" class="edit-btn">수정</a>
                             <button class="deletebtn">삭제</button>
@@ -106,9 +126,8 @@
                 </table>
                 <div class="buttons">
                     <button class="delete-btn" disabled>선택 삭제</button>
-                    <a href="#" class="write-btn">상품등록</a>
+                    <a href="#" class="write-btn">작성하기</a>
                 </div>
-
                 <div class="pagination">
                     <button class="page-btn">이전</button>
                     <button class="page-num">1</button>

@@ -85,7 +85,7 @@ h3 {
     color: #888;
 }
 
- .price-info del {
+.price-info del {
     margin-right: 10px;
     color: #999;
 }
@@ -137,7 +137,7 @@ textarea{
 }
 .tableTitle {
     font-size: 18px;
-    font-weight: bold; 
+    font-weight: bold;
     margin-left:-10px;
     color: #333;
 }
@@ -163,7 +163,7 @@ textarea{
     background-color: rgb(177, 31, 31);
     width: 75px;
     color: white;
-    cursor: pointer;    
+    cursor: pointer;
     border-radius: 4px;
     padding: 10px;
     border: 1px solid white;
@@ -214,7 +214,7 @@ textarea{
 }
 .form-group td {
     width:50%;
-     font-size: 12px;
+    font-size: 12px;
     color: #333;
     padding:6px;
     text-indent : 10px;
@@ -281,8 +281,8 @@ textarea{
 }
 
 .checkout-row td {
-width:30%;
-padding:10px
+    width:30%;
+    padding:10px
 }
 
 .checkout-btn {

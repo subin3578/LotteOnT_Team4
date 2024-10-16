@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<!-- <html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.thymeleaf.org/"> -->
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org/">
 <head>
     <meta charset="UTF-8">
     <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
@@ -10,8 +9,8 @@
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
-    <link rel="stylesheet" href="../css/common.css" />
-    <link rel="stylesheet" href="../css/policy/style.css"/>
+    <link rel="stylesheet" th:href="@{/css/common.css}"/>
+    <link rel="stylesheet" th:href="@{/css/policy/style.css}"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
@@ -125,17 +124,17 @@
                     </li>
                 </ul>
             </aside>
-            
-            <section class="content">
-              <nav>
-                <h1>LotteON 서비스 이용약관</h1>
-                <ul>
-            <li class="on"><a th:href="@{/policy/buyer}">구매회원 약관</a></li>
-            <li><a th:href="@{/policy/sellerpolicy}">판매회원 약관</a></li>                    
-            <li><a th:href="@{/policy/finance}">전자금융거래 약관</a></li>
-            <li><a th:href="@{/policy/location}">위치정보이용 약관</a></li>                      
-            <li><a th:href="@{/policy/privacy}">개인정보수집 방침</a></li>
-                </ul>
+
+            <section layout:fragment="content">
+                <nav>
+                    <h1>LotteON 서비스 이용약관</h1>
+                    <ul>
+                        <li class="on"><a th:href="@{/policy/buy}">구매회원 약관</a></li>
+                        <li><a th:href="@{/policy/seller}">판매회원 약관</a></li>
+                        <li><a th:href="@{/policy/finance}">전자금융거래 약관</a></li>
+                        <li><a th:href="@{/policy/location}">위치정보이용 약관</a></li>
+                        <li><a th:href="@{/policy/privacy}">개인정보수집 방침</a></li>
+                    </ul>
               </nav>
               <article>
                 <h2>구매회원 이용약관</h2>

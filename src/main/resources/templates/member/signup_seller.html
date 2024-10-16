@@ -8,41 +8,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="css/user/common.css" />
-    <link rel="stylesheet" href="../css/member/signup_seller.css" />
+    <link rel="stylesheet" th:href="@{css/user/common.css}" />
+    <link rel="stylesheet" th:href="@{/css/member/signup.css}" />
 </head>
-
+<header th:replace="~{include/mem_header.html}"></header>
 <body>
-    <header>
-        <div class="top">
-            <div>
-                <block sec:authorize="isAnonymous()">
-                    <a href="/member/login">로그인</a>
-                    <a href="/member/join">회원가입</a>
-                </block>
-                <block sec:authorize="isAuthenticated()">
-                    <!-- <a href="#" >[[${#authentication.principal.member.name}]]</a> 이름 -->
-                    <block sec:authorize="hasRole('1')">
-                        <!-- <a href="/my/home(uid=${#authentication.principal.member.uid})">마이페이지</a> -->
-                        <a href="#">마이페이지</a>
-                    </block>
-                    <block sec:authorize="hasAnyRole('2','3')">
-                        <a href="/admin/index">관리자</a>
-                    </block>
-                    <a href="/member/logout">로그아웃</a>
-                    <a href="/member/cart">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
-                        장바구니
-                    </a>
-                </block>
-            </div>
-        </div>
-        <div class="logo">
-            <div>
-                <a href="#"><img src="images/main/header_logo.png" alt="로고" /></a>
-            </div>
-        </div>
-    </header>
     <main>
         <div class="login-container">
             <h2 class="titterm">

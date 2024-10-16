@@ -7,15 +7,17 @@
     <title>버전관리</title>
 
     <!--공통 css 부분-->
-    <link rel="stylesheet" href="/css/admin/style_admin_common.css">
+    <link rel="stylesheet" th:href="@{/css/admin/style_admin_common.css}"/>
     <!--각 페이지(section) 개별 css-->
-    <link rel="stylesheet" href="/css/admin/style_admin_config_version.css">
+    <link rel="stylesheet" th:href="@{/css/admin/style_admin_config_version.css}"/>
 
 </head>
 <body>
 <header>
     <div class="header-top">
-        <a href="#" class="logo"><img src="/images/logo.png"></a>
+        <a href="#" class="logo">
+            <img th:src="@{/images/logo.png}" alt="Logo"/>
+        </a>
         <nav>
             <a href="#">로그아웃</a>
             <a href="#">고객센터</a>

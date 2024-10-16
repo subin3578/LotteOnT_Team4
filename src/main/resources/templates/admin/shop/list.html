@@ -8,18 +8,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>상품현황</title>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
-    
-    
-    <!--공통 css 부분-->
-    <link rel="stylesheet" th:href="@{/css/admin/style_admin_common.css}">
 
+    <!--공통 css 부분-->
+    <link rel="stylesheet" th:href="@{/css/admin/style_admin_common.css}"/>
     <!--각 페이지(section) 개별 css-->
-    <link rel="stylesheet" th:href="@{/css/admin/style_shop_list.css}">
+    <link rel="stylesheet" th:href="@{/css/admin/style_shop_list.css}"/>
+
 </head>
 <body>
     <header>
         <div class="header-top">
-            <a href="#" class="logo"><img src="../images/logo.png "></a>
+            <a href="#" class="logo">
+                <img th:src="@{/images/logo.png}" alt="Logo"/>
+            </a>
             <nav>
                 <a th:href="@{/member/login}">로그아웃</a>
                 <a th:href="@{/cs/index}">고객센터</a>

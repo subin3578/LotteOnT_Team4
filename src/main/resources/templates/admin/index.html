@@ -7,15 +7,18 @@
     <title>관리자 메인</title>
 
     <!--공통 css 부분-->
-    <link rel="stylesheet" href="/css/admin/style_admin_common.css">
+    <link rel="stylesheet" th:href="@{/css/admin/style_admin_common.css}"/>
     <!--각 페이지(section) 개별 css-->
-    <link rel="stylesheet" href="/css/admin/style_admin_main.css">
+    <link rel="stylesheet" th:href="@{/css/admin/style_admin_main.css}"/>
+
 
 </head>
 <body>
     <header>
         <div class="header-top">
-            <a href="#" class="logo"><img src="/images/logo.png"></a>
+            <a href="#" class="logo">
+                <img th:src="@{/images/logo.png}" alt="Logo"/>
+            </a>
             <nav>
                 <a href="#">로그아웃</a>
                 <a href="#">고객센터</a>
@@ -114,7 +117,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 롯데ON. All rights reserved.</p>
+        <p>Copyright ©LotteON.co.kr All rights reserved. LotteON ADMINISTRATOR Version 5.4.1.2</p>
     </footer>
 </body>
 </html>

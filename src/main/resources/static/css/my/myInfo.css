@@ -137,30 +137,12 @@ main {
 }
 
 
-
-
-
-
 /* 섹션 영역 */
 .myInfo_sec{
     float: left;
     margin: 15px 15px;
     width : 810px;
 }
-
-/* 광고 배너 */
-.myInfo_banner {
-    width: 810px;
-    height: 86px;
-    overflow: hidden;
-    margin-bottom: 15px;
-}
-.myInfo_banner>a> img {
-    width: 100%;
-    /* 이미지 가운데 정렬 */
-    transform: translate(0, -50%);
-}
-/* 광고 배너 끝 */
 
 
 .myInfo_ArticleTitle > span{
@@ -171,6 +153,13 @@ main {
 .myInfo_ArticleTitle > a{
     float: right;
     margin-top: 5px;
+}
+
+.myInfo_Article {
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 10px #acabab4d;
+    margin-bottom: 10px;
 }
 
 .myInfo_Table{
@@ -197,16 +186,7 @@ main {
 }
 
 
-.myInfo_product_buttons button:nth-child(3), .myInfo_product_buttons button:nth-child(4){
-    display: block;
-    width: 100px;
-    margin: 5px 0;
-    padding: 5px;
-    background-color: rgb(238, 238, 238);
-    color: black;
-    border: 1px solid rgb(165, 165, 165);
-    cursor: pointer;
-}
+
 /* 최근 주문내역 */
 
 .myInfo_PointRecode td{

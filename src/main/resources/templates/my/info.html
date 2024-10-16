@@ -14,12 +14,11 @@
 <body>
   <div id="wrapper">
     <main>
+      <header th:replace="~{include/my_header.html}"></header>
       <!--어사이드-->
       <div th:replace="~{my/my_aside.html}"></div>
       <section class="myInfo_sec">
-        <div class="myInfo_banner">
-          <a href="#"><img src="../images/company/bg_company_promote.jpg" alt=""></a>
-        </div>
+        <div th:replace="~{my/banner.html}"></div>
         <article class="myInfo_Info myInfo_Article">
           <div class="myInfo_ArticleTitle"><span>나의 설정</span></div>
           <form action="#" class="myInfoForm" method="post">
@@ -92,6 +91,7 @@
       </section>
     </main>
   </div>
+  <footer th:replace="~{include/footer.html}"></footer>
 </body>
 
 </html>

@@ -2,46 +2,17 @@
 <!-- xmlns:th="http://www.thymeleaf.org"
         xmlns:layout="http://www.thymeleaf.org/"
         xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" -->
-        
+
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
     <title>롯데ON::롯데 온라인 쇼핑몰</title>
-    <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" th:href="@{../css/main/common.css}"/>
-    <link rel="stylesheet" th:href="@{../css/product/style_product_list.css}"/>
-    <!-- <script src="js/main/index.js"></script> -->
-  
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico"/>
+    <link rel="stylesheet" th:href="@{/css/main/common.css}"/>
+    <link rel="stylesheet" th:href="@{/css/include/header.css}"/>
+    <link rel="stylesheet" th:href="@{/css/product/style_product_list.css}"/>
 
-
-    <script inline="javascript">
-        $(function () {
-            $('#bannerTop .btnClose').click(function () {
-                $(this).closest('#bannerTop').removeClass('on');
-            });
-        });
-
-
-        $(function() {
-            /* 전역 변수로 컨텍스트 경로 값을 설정 */
-            $.ajax({
-                url: '/LotteON/product/mainProdCate2',
-                type: 'GET',
-                data: '',
-                success: function(data) {
-                    console.log("1");
-                    
-                    $('.category').children().remove();
-                    $('.category').append(data);
-                },
-                error: function(){
-                    console.log('error');    
-                }
-            });
-        });
-   
-        /*]]>*/
-    </script>
 </head>
 <body>
 <div id="bannerTop" class="on" style="background: #e4dfdf;">
@@ -51,59 +22,40 @@
     </article>
 </div>
 <div id="wrapper">
-    <header>
-        <div class="top">
-            <div>
-                <block sec:authorize="isAnonymous()">
-                    <a href="/member/login">로그인</a>
-                    <a href="/member/join">회원가입</a>
-                </block>
-                <block sec:authorize="isAuthenticated()">
-                    <!-- <a href="#" >[[${#authentication.principal.member.name}]]</a> 이름 -->
-                    <block sec:authorize="hasRole('1')">
-                        <!-- <a href="/my/home(uid=${#authentication.principal.member.uid})">마이페이지</a> -->
-                        <a href="#">마이페이지</a>
-                    </block>
-                    <block sec:authorize="hasAnyRole('2','3')" >
-                        <a href="/admin/index">관리자</a>
-                    </block>
-                    <a href="/member/logout">로그아웃</a>
-                    <a href="/member/cart">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
-                        장바구니
-                    </a>
-                </block>
-            </div>
-        </div>
-        <div class="logo">
-            <div>
-                <a href="#"><img src="../images/main/header_logo.png" alt="로고"/></a>
-                <form action="#">
-                    <input type="text" name="search"/>
-                    <button><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="menu">
-            <div>
-                <ul>
-                    <li><a href="#">히트상품</a></li>
-                    <li><a href="#">추천상품</a></li>
-                    <li><a href="#">최신상품</a></li>
-                    <li><a href="#">인기상품</a></li>
-                    <li><a href="#">할인상품</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/cs/list(cate1=notice,cate2=all)">공지사항</a></li>
-                    <li><a href="/cs/faq/list(cate1=faq,cate2=member)">자주묻는질문</a></li>
-                    <li><a href="/cs/list(cate1=qna,cate2=member)">문의하기</a></li>
-                    <li><a href="/cs/index">고객센터</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <header th:replace="~{include/header.html}"></header>
     <main class="mainIn cf">
-        <div th:replace="~{main_aside.html}"></div>
+        <aside>
+            <!-- 베스트상품 배너 -->
+            <article class="best">
+                <h1><i class="fas fa-crown"></i>베스트상품</h1>
+                <ol>
+                    <block each="product5, loop :${productSold}">
+                        <li>
+                            <a href="/product/view(prodCate1=${product5.getProdCate1()},prodCate2=${product5.getProdCate2()},prodNo=${product5.getProdNo()},price=${product5.getPrice()})}">
+                                <div class="thumb">
+                                    <i text="${loop.index+1}"></i>
+                                    <img src="/thumbs/+${product5.prodCate1}+'/'+${product5.prodCate2}+'/'+${product5.thumb2}" alt="item1"/>
+                                </div>
+                                <h2 text="${product5.prodName}"></h2>
+                                <div class="org_price">
+                                    <del text="${product5.price}"></del>
+                                    <span text="${product5.discount+'%'}"></span>
+                                </div>
+                                <div class="dis_price">
+                                    <ins text="${product5.getDiscount(product5.price,product5.discount)}"></ins>
+                                    <block if="${product5.delivery == 0}">
+                                        <span class="free">무료배송</span>
+                                    </block>
+                                    <block if="${product5.delivery != 0}">
+                                        <span text=" '배송비:'+${product5.delivery}+'원'"></span>
+                                    </block>
+                                </div>
+                            </a>
+                        </li>
+                    </block>
+                </ol>
+            </article>
+        </aside>
         <!-- 카테고리/베스트 상품 영역 -->
         <section class="product-list-section">
             <!-- Breadcrumb -->
@@ -112,13 +64,13 @@
                 <a href="#">패션·의류·뷰티</a> &gt;
                 <a href="#">남성의류</a>
             </div>
-        
+
             <!-- 상품 목록 제목 -->
             <h2 class="section-title">상품목록</h2>
-        
+
             <!-- 상품 정렬 옵션 -->
             <div class="sort-options">
-    
+
                 <div class="sort-left">
                     <a href="#" class="sort-link">인기순</a>
                     <a href="#" class="sort-link">신상품순</a>
@@ -126,14 +78,14 @@
                     <a href="#" class="sort-link">낮은가격순</a>
                     <a href="#" class="sort-link">할인율순</a>
                 </div>
-                
+
                 <div class="sort-view-options">
                     <span class="view-count">VIEW</span>
                     <a href="/product/list.html" class="sort-linkRight">목록보기</a>
                     <a href="/product/list_grid.html" class="sort-linkRight">바둑보기</a>
                 </div>
             </div>
-        
+
             <!-- 상품목록 -->
             <div class="product-list">
                 <!-- 상품 1 -->
@@ -146,7 +98,7 @@
                         <h3 class="product-name">상품명</h3>
                         <p class="product-description">간단한 상품 설명</p>
                         <div class="price-info">
-                    
+
                             <span class="original-price">30,000원</span>
                             <span class="discount-rate">10% ↓</span>
                             <span class="product-price">27,000원</span>
@@ -164,7 +116,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- 상품 3 -->
                 <div class="product-item">
                     <div class="product-image">
@@ -215,8 +167,8 @@
                         </div>
                     </div>
                 </div>
-                   <!-- 상품 4 -->
-                   <div class="product-item">
+                <!-- 상품 4 -->
+                <div class="product-item">
                     <div class="product-image">
                         <img src="../images/product/image2.png" alt="Product Image" />
                     </div>
@@ -241,7 +193,7 @@
                     </div>
                 </div>
                 <!-- 페이지네이션 -->
-        
+
             </div>
             <div class="pagination">
                 <ul>
@@ -255,7 +207,7 @@
                 </ul>
             </div>
         </section>
-        
+
 
     </main>
     <footer>
@@ -268,7 +220,7 @@
         <div>
             <p><img src="../images/main/footer_logo.png" alt="로고"/></p>
             <p>
-                <strong>(주)롯데ON</strong><br/>- bxSlider 
+                <strong>(주)롯데ON</strong><br/>- bxSlider
                 대표이사 : 김사무엘상현, 정준호, 강성현<br/>
                 사업자등록번호 : 529-85-00774(롯데쇼핑(주) e커머스사업부)<br/>
                 통신판매업 신고 : 서울송파 제0158호<br>

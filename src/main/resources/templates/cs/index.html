@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>고객센터 메인</title>
-    <link rel="stylesheet" href="/css/cs/index.css" />
+    <link rel="stylesheet" th:href="@{/css/common.css}">
+    <link rel="stylesheet" th:href="@{/css/cs/index.css}" />
   </head>
   <body>
     <section id="section_wrapper">
@@ -23,8 +24,8 @@
                 <span>공지사항</span>
                 <div>
                   <!-- 공지사항 링크 / 화살표 이미지 링크 필요 -->
-                  <a href="#">전체보기</a>
-                  <a href="#" class="viewAll"></a>
+                  <a th:href="@{/cs/notice/list}">전체보기</a>
+                  <a th:href="@{/cs/notice/list}" class="viewAll"></a>
                 </div>
               </th>
             </tr>
@@ -55,8 +56,8 @@
               <span>자주하는질문</span>
               <span>
                 <!-- 자주하는질문 링크 / 화살표 이미지 링크 필요 -->
-                <a href="#">전체보기</a>
-                <a href="#" class="viewAll"></a>
+                <a th:href="@{/cs/faq/list}">전체보기</a>
+                <a th:href="@{/cs/faq/list}" class="viewAll"></a>
               </span>
             </th>
           </thead>
@@ -101,8 +102,8 @@
               <span>문의하기</span>
               <span>
                 <!-- 문의하기 링크 / 화살표 이미지 링크 필요 -->
-                <a href="#">전체보기</a>
-                <a href="#" class="viewAll"></a>
+                <a th:href="@{/cs/qna/list}">전체보기</a>
+                <a th:href="@{/cs/qna/list}" class="viewAll"></a>
               </span>
             </th>
           </thead>

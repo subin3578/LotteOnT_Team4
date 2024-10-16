@@ -1,100 +1,100 @@
 /* 상품 목록 섹션 */
 .product-list-section {
     padding: 20px;
-  }
+}
 
-  .section-title {
+.section-title {
     font-size: 24px;
     font-weight: bold;
     padding : 10px;
-  }
-  
-  .sort-btn {
+}
+
+.sort-btn {
     border: none;
     background-color: #f0f0f0;
     padding: 10px 15px;
     margin-right: 10px;
     cursor: pointer;
     border-radius: 5px;
-  }
-  
-  .sort-btn:hover {
+}
+
+.sort-btn:hover {
     background-color: #e4e4e4;
-  }
-  
-  /* 상품 리스트 스타일 */
-  .product-list {
+}
+
+/* 상품 리스트 스타일 */
+.product-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  /* 각 상품 아이템 스타일 */
-  .product-item {
+}
+
+/* 각 상품 아이템 스타일 */
+.product-item {
     display: flex;
     justify-content: space-between;
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
-  }
-  
+}
 
-  .product-image img {
+
+.product-image img {
     width: 120px;
     height: 120px;
     object-fit: cover;
-  }
-  
-  .product-details {
+}
+
+.product-details {
     flex-grow: 1;
     margin-left: 20px;
-  }
-  
-  .product-name {
+}
+
+.product-name {
     font-size: 18px;
     font-weight: bold;
-  }
-  
-  .product-description {
+}
+
+.product-description {
     color: #666;
     margin: 10px 0;
-  }
-  
-  .price-info {
+}
+
+.price-info {
     display: flex;
     align-items: center;
     gap: 10px;
     font-size: 16px;
-  }
-  
-  .product-price {
+}
+
+.product-price {
     font-size: 18px;
     font-weight: bold;
     color: #ef2a23;
-    }
-  .original-price {
+}
+.original-price {
     text-decoration: line-through;
     color: #999;
-  }
-  
-  .discount-rate {
+}
+
+.discount-rate {
     color: red;
-  }
-  
-  .shipping-info {
+}
+
+.shipping-info {
     margin-top: 10px;
     font-size: 14px;
-  }
-  
-  .seller-info {
+}
+
+.seller-info {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
     font-size: 14px;
-  }
-  
-  .seller-badge {
+}
+
+.seller-badge {
     background-color: #ffecb3;
     padding: 2px 5px;
     border-radius: 3px;
@@ -102,99 +102,98 @@
     padding :5px;
     display: inline-block;
     margin-top: 5px;
-  }
+}
 
 
-  .rating {
+.rating {
     color: darkgray;
-  }
-  
+}
 
-  /* 정렬 옵션 */
-  .sort-options {
+
+/* 정렬 옵션 */
+.sort-options {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
-  }
-  
-  .sort-link {
+}
+
+.sort-link {
     padding: 10px 15px;
     font-size: 14px;
     text-decoration: none;
     color: #333;
     transition: color 0.2s ease;
-  }
-  
-  .sort-link:hover {
+}
+
+.sort-link:hover {
     color: #ff5656; /* 마우스 오버 시 색 변경 */
-  }
-  
-  /* 왼쪽 정렬 */
-  .sort-options .sort-link {
+}
+
+/* 왼쪽 정렬 */
+.sort-options .sort-link {
     margin-right: 20px;
-  }
-  
-  /* 오른쪽 정렬 */
-  .sort-options .sort-linkRight {
+}
+
+/* 오른쪽 정렬 */
+.sort-options .sort-linkRight {
     margin-left: 20px;
     font-size: 16px;
-  }
-  
-  .sort-options .sort-view-options {
+}
+
+.sort-options .sort-view-options {
     display: flex;
     align-items: center;
-  }
-  
-  /* 아이콘과 텍스트 오른쪽 정렬 */
-  .sort-options .sort-view-options a {
+}
+
+/* 아이콘과 텍스트 오른쪽 정렬 */
+.sort-options .sort-view-options a {
     margin-left: 10px;
     font-size: 14px;
     text-decoration: none;
     color: #333;
-  }
-  
-  .sort-options .sort-view-options a:hover {
+}
+
+.sort-options .sort-view-options a:hover {
     color: #ff5656;
-  }
-  
-  /* VIEW 선택 */
-  .view-count {
+}
+
+/* VIEW 선택 */
+.view-count {
     font-weight: bold;
     margin-left: 10px;
-  }
-  
+}
 
- /* 페이지네이션 */
-  .pagination {
+
+/* 페이지네이션 */
+.pagination {
     margin-top: 20px;
     text-align: center;
-  }
-  
-  .pagination ul {
+}
+
+.pagination ul {
     list-style: none;
     padding: 0;
     display: inline-block;
-  }
-  
-  .pagination ul li {
+}
+
+.pagination ul li {
     display: inline;
     margin: 0 5px;
-  }
-  
-  .pagination ul li a {
+}
+
+.pagination ul li a {
     text-decoration: none;
     color: #333;
     padding: 5px 10px;
     border: 1px solid #ddd;
     border-radius: 3px;
     font-size: 14px;
-  }
-  
-  .pagination ul li a:hover {
+}
+
+.pagination ul li a:hover {
     background-color: #f0f0f0;
     border-color: #ccc;
-  }
-  
+}

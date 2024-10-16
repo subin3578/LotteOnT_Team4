@@ -8,6 +8,17 @@ public class AdminController {
 
     @GetMapping("/admin/index")
     public String Adminhome(){
-        return "/admin/index";
+        return "admin/index";
     }
+
+    @GetMapping("/admin/member/list")
+    public String Adminmemberlist(){
+        return "admin/member_list";
+    }
+
+    @GetMapping("/admin/member/point")
+    public String Adminmemberpoint(){
+        return "admin/member_point";
+    }
+
 }

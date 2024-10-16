@@ -14,14 +14,13 @@
   <div id="wrapper">
 
     <main>
+      <header th:replace="~{include/my_header.html}"></header>
       <!--어사이드-->
       <div th:replace="~{my/my_aside.html}"></div>
 
       <section class="myInfo_sec">
 
-        <div class="myInfo_banner">
-          <a href="#"><img src="../images/company/bg_company_promote.jpg" alt=""></a>
-        </div>
+        <div th:replace="~{my/banner.html}"></div>
 
         
         <!-- 쿠폰내역 -->
@@ -93,6 +92,7 @@
       </section>
     </main>
   </div>
+  <footer th:replace="~{include/footer.html}"></footer>
 </body>
 
 </html>

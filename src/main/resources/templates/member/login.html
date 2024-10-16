@@ -1,56 +1,29 @@
 <!DOCTYPE html>
-<!-- xmlns:th="http://www.thymeleaf.org"
-        xmlns:layout="http://www.thymeleaf.org/"
-        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6" -->
-<html lang="en" xmlns:sec="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.thymeleaf.org/"
+        xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity6">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>login</title>
-    <link rel="stylesheet" href="css/user/common.css"/>
-    <link rel="stylesheet" href="/css/member/login.css"/>
+    <link rel="stylesheet" th:href="@{css/user/common.css}"/>
+    <link rel="stylesheet" th:href="@{/css/member/login.css}"/>
 
 </head>
 <style>
 
+
+
+
 </style>
 <body>
-<header>
-    <div class="top">
-        <div>
-            <div sec:authorize="isAnonymous()">
-                <a href="/member/login">로그인</a>
-                <a href="/member/join">회원가입</a>
-            </div>
-            <div sec:authorize="isAuthenticated()">
-                <!-- <a href="#" >[[${#authentication.principal.member.name}]]</a> 이름 -->
-                <block sec:authorize="hasRole('1')">
-                    <!-- <a href="/my/home(uid=${#authentication.principal.member.uid})">마이페이지</a> -->
-                    <a href="#">마이페이지</a>
-                </block>
-                <block sec:authorize="hasAnyRole('2','3')" >
-                    <a href="/admin/index">관리자</a>
-                </block>
-                <a href="/member/logout">로그아웃</a>
-                <a href="/member/cart">
-                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
-                    장바구니
-                </a>
-            </div>
-        </div>
-    </div>
-    <div class="logo">
-        <div>
-            <a href="#"><img src="images/main/header_logo.png" alt="로고"/></a>
-        </div>
-    </div>
-</header>
 <main>
     <div class="login-container">
         <h2 class="titlogin">
             <span class="tit">로그인</span>
         </h2>
-        <div class="login-section">
+        <div class="login-section" style="padding-top: 20px;">
             <div class="login-image-container"> <!-- 새 컨테이너 추가 -->
                 <!-- 로그인 폼 -->
                 <div class="login-form">
@@ -65,7 +38,7 @@
                         </div>
                     </div>
                     <div class="login-btn-container">
-                        <a href="#"><img src="./images/member/member_btn_login.gif"></a>
+                        <a href="#"><img th:src="@{/images/member/member_btn_login.gif}"></a>
                     </div>
                     <div class="options">
                         <input type="checkbox" id="auto-login">
@@ -81,12 +54,12 @@
 
                 <!-- 이미지 섹션 -->
                 <div class="image-section">
-                    <img src="./images/member/member_login_banner.jpg" alt="광고 또는 이미지">
+                    <img th:src="@{/images/member/member_login_banner.jpg}" alt="광고 또는 이미지">
                 </div>
             </div>
-
-            <!-- 옵션 섹션 -->
-
+        </div>
+        <div class="certifi_logo">
+            <img th:src="@{/images/member/member_certifi_logo.gif}" alt="인증로고">
         </div>
     </div>
 </main>

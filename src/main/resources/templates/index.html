@@ -10,95 +10,6 @@
     <title>롯데ON::롯데 온라인 쇼핑몰</title>
     <link rel="stylesheet" th:href="@{/css/main/common.css}"/>
     <script src="https://kit.fontawesome.com/20962f3e4b.js" crossorigin="anonymous"></script>
-    <!-- <script src="js/main/index.js"></script> -->
-    <script>
-        $(document).ready(function () {
-            $(".slider > ul").bxSlider({
-                easing: "linear",
-            });
-        });
-
-        $(function () {
-            var best = $("aside > .best");
-
-            $(window).scroll(function () {
-                var t = $(this).scrollTop();
-
-                if (t > 620) {
-                    best.css({
-                        position: "fixed",
-                        top: "0",
-                    });
-                } else {
-                    best.css({ position: "static" });
-                }
-            });
-        });
-    </script>
-    <style>
-        #bannerTop {
-            display: none;
-            width: 100%;
-            height: 80px;
-            border-bottom: 1px solid #e9e9e9;
-            box-sizing: border-box;
-        }
-
-        #bannerTop.on {
-            display: block;
-        }
-
-        #bannerTop > article {
-            position: relative;
-            width: 1200px;
-            height: 100%;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        #bannerTop > article > .btnClose {
-            position: absolute;
-            right: 0px;
-            top: 0px;
-            width: 40px;
-            height: 40px;
-            background-position: -122px -142px;
-            background-color: transparent;
-            font-size: 0;
-            border: none;
-            cursor: pointer;
-        }
-
-    </style>
-    <script inline="javascript">
-        $(function () {
-            $('#bannerTop .btnClose').click(function () {
-                $(this).closest('#bannerTop').removeClass('on');
-            });
-        });
-
-
-        $(function() {
-            /* 전역 변수로 컨텍스트 경로 값을 설정 */
-            $.ajax({
-                url: '/LotteON/product/mainProdCate2',
-                type: 'GET',
-                data: '',
-                success: function(data) {
-                    console.log("1");
-
-                    $('.category').children().remove();
-                    $('.category').append(data);
-                },
-                error: function(){
-                    console.log('error');
-                }
-            });
-        });
-
-
-        /*]]>*/
-    </script>
 </head>
 <body>
 <div id="bannerTop" class="on" style="background: #e4dfdf;">
@@ -108,55 +19,7 @@
     </article>
 </div>
 <div id="wrapper">
-    <header>
-        <div class="top">
-            <div>
-                <block sec:authorize="">
-                    <a href="/member/login">로그인</a>
-                    <a href="/member/join">회원가입</a>
-                </block>
-                <block sec:authorize="">
-                    <block sec:authorize="">
-                        <a th:href="@{/my/home}">마이페이지</a>
-                    </block>
-                    <block sec:authorize="" >
-                        <a href="/admin/index">관리자</a>
-                    </block>
-                    <a href="/member/logout">로그아웃</a>
-                    <a href="/member/cart">
-                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;
-                        장바구니
-                    </a>
-                </block>
-            </div>
-        </div>
-        <div class="logo">
-            <div>
-                <a href="#"><img th:src="@{images/main/header_logo.png}" alt="로고"/></a>
-                <form action="#">
-                    <input type="text" name="search"/>
-                    <button><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-        </div>
-        <div class="menu">
-            <div>
-                <ul>
-                    <li><a href="/templates/product/list.html">히트상품</a></li>
-                    <li><a href="/templates/product/list.html">추천상품</a></li>
-                    <li><a href="#">최신상품</a></li>
-                    <li><a href="#">인기상품</a></li>
-                    <li><a href="#">할인상품</a></li>
-                </ul>
-                <ul>
-                    <li><a href="/cs/list(cate1=notice,cate2=all)">공지사항</a></li>
-                    <li><a href="/cs/faq/list(cate1=faq,cate2=member)">자주묻는질문</a></li>
-                    <li><a href="/cs/list(cate1=qna,cate2=member)">문의하기</a></li>
-                    <li><a href="/cs/index">고객센터</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <header th:replace="~{include/header.html}"></header>
     <main>
         <div th:replace="~{main_aside.html}"></div>
         <section>
@@ -300,6 +163,7 @@
             </section>
         </section>
     </main>
+
     <footer>
         <ul>
             <li><a href="/company/index">회사소개</a></li>

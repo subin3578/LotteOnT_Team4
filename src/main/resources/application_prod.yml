@@ -22,13 +22,11 @@ server:
 spring:
     application:
         name: lotteon-team4
-
     datasource:
-        driver-class-name: com.mysql.cj.jdbc.Driver
-        password: "lotteTeam4!"
-        url: jdbc:mysql://52.79.123.218:3306/lotte
-        username: lotte4
-
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      password: "lotteTeam4!"
+      url: jdbc:mysql://52.79.123.218:3306/lotteon
+      username: lotte4
     devtools:
         livereload:
             enabled: true

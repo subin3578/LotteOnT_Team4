@@ -8,7 +8,7 @@ public class PolicyController {
 
     @GetMapping("/policy/buy")
     public String buy() {
-        return "/policy/buy";
+        return "buyer";
     }
 
     @GetMapping("/policy/finance")
